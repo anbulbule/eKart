@@ -1,8 +1,5 @@
-<div class="card fixed-bottom">
+<div class="mt-52 card ">
     <div class="card-header">
         Panel Header
-    </div>
-    <div class="card-body">
-        panel Body
     </div>
 </div>    

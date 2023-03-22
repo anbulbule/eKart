@@ -19,7 +19,7 @@ if(Session::has('user')){
               <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Orders</a>
+              <a class="nav-link text-white" href="/myorders">Orders</a>
             </li>
               <li class="mx-3 w-100">
                   <form action="search" class="d-flex text-white" role="search">
@@ -32,7 +32,7 @@ if(Session::has('user')){
               <a href="/cartlist" class="fs-5"><span>Cart <i class="fa-solid fa-cart-shopping"></i><sup> {{ $total }}</sup></span></a>
           </div>
           @if (session('user'))
-          <ul class="navbar-nav mr-4 ">
+          <ul class="navbar-nav mr-12 ">
             <li class="nav-item dropdown text-xl">
               <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ session('user')['name'] }}
@@ -46,7 +46,8 @@ if(Session::has('user')){
           </ul>
           @else
           <div class="mx-5 text-white">
-            <a href="/login" class="fs-4">Login</a>
+            <a href="/login" class="fs-5">Login</a>
+            <a href="/register" class="fs-5 ml-4">Register</a>
           </div>
           @endif
         </div>

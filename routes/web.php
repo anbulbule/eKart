@@ -14,8 +14,8 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::view('/login','login');
-Route::post('/login',[UserCOntroller::class,'login']);
+Route::get('/login',[UserController::class,'index']);
+Route::post('/login',[UserController::class,'login']);
 Route::get('/',[ProductController::class,'index']);
 Route::get('/detail/{id}',[ProductController::class,'detail']);
 Route::get('/search',[ProductController::class,'search']);
@@ -23,4 +23,9 @@ Route::post('add_to_cart',[ProductController::class,'addToCart']);
 Route::get('logout',[ProductController::class,'logout']);
 Route::get('/cartlist',[ProductController::class,'cartList']);
 Route::get('/removecart/{id}',[ProductController::class,'removeCart']);
+Route::get('/ordernow',[ProductController::class,'orderNow']);
+Route::post('/orderplace',[ProductController::class,'orderPlace']);
+Route::get('/myorders',[ProductController::class,'myOrders']);
+Route::view('/register','register');
+Route::post('/register',[UserController::class,'register']);
 

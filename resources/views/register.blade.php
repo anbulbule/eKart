@@ -6,8 +6,12 @@
                 @if(session('status'))
                     <span class="text-danger fs-5 ">{{ session('status') }} **</span>
                 @endif
-                <form action="{{ url('/login') }}" method="POST">
+                <form action="{{ url('/register') }}" method="POST">
                     @csrf
+                    <div class="mb-4">
+                        <label for="" class="form-label text-xl">User Name :</label>
+                        <input type="text" name="username" class="form-control" placeholder="Enter Name">
+                    </div>
                     <div class="mb-4">
                         <label for="" class="form-label text-xl">Email Id :</label>
                         <input type="email" name="email" class="form-control" placeholder="Enter Email">
@@ -17,7 +21,7 @@
                         <input type="password" name="password" class="form-control" placeholder="Enter Password">
                     </div>
                     <div>
-                        <input type="submit" class="btn bg-blue-500 text-white hover:bg-blue-900 mt-3 px-5">
+                        <input type="submit" class="btn bg-blue-500 text-white hover:bg-blue-900 mt-3 px-5" value="Register">
                     </div>
                 </form>
             </div>

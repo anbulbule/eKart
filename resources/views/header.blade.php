@@ -6,30 +6,28 @@ if(Session::has('user')){
 }
 @endphp
 
-<div class="row">
-  <div class="col-12">
-    <nav class="navbar bg-dark  navbar-expand-lg bg-light">
-      <div class="container-fluid ">
-        <a class="navbar-brand text-2xl text-white" href="/">eKart</a>
-  
-        {{-- navbar collapse content --}}
-        <div class="navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav w-2/3 me-auto mb-2 mb-lg-0">
-            <li class="nav-item ">
-              <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="/myorders">Orders</a>
-            </li>
-              <li class="mx-3 w-100">
-                  <form action="search" class="d-flex text-white" role="search">
-                      <input class="form-control rounded me-2" name="search" value="" type="text" placeholder="Search" aria-label="Search">
-                      <button class="text-white btn btn-outline-success" type="submit">Search</button>
-                  </form>
-              </li>
-          </ul>
+<div class="container-fluid bg-dark">
+  <div class="row p-2">
+    <div class="col">
+      <div class="d-flex align-items-center">
+        <span>
+          <a class="navbar-brand text-2xl text-white" href="/">eKart</a>
+        </span>
+        <span class="ml-5">
+          <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+        </span>
+        <span class="ml-5">
+          <a class="nav-link text-white" href="/myorders">Orders</a>
+        </span>
+        <span class="ml-5">
+          <form action="search" class="d-flex text-white" role="search">
+            <input class="form-control rounded me-2" name="search" value="" type="text" placeholder="Search" aria-label="Search">
+            <button class="text-white btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </span>
+        <div class="col d-flex justify-end d-flex align-items-center">
           <div class="mx-3 text-white">
-              <a href="/cartlist" class="fs-5"><span>Cart <i class="fa-solid fa-cart-shopping"></i><sup> {{ $total }}</sup></span></a>
+            <a href="/cartlist" class="fs-5"><span>Cart <i class="fa-solid fa-cart-shopping"></i><sup> {{ $total }}</sup></span></a>
           </div>
           @if (session('user'))
           <ul class="navbar-nav mr-12 ">
@@ -52,6 +50,6 @@ if(Session::has('user')){
           @endif
         </div>
       </div>
-    </nav>
+    </div>
   </div>
 </div>
